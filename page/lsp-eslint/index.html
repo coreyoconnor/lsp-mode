@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -8,12 +6,16 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Language Server Protocol Support for Emacs">
+      
       
         <link rel="canonical" href="https://emacs-lsp.github.io/lsp-mode/page/lsp-eslint/">
       
       
+        <meta name="author" content="ercdll1337@gmail.com">
+      
       <link rel="shortcut icon" href="../../examples/logo-mini.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.11">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.0">
     
     
       
@@ -21,13 +23,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.860688db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1d877a71.min.css">
       
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.17bd0b03.min.css">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -50,9 +56,14 @@
   </head>
   
   
-    <body dir="ltr">
-  
     
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -142,8 +153,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
           
@@ -213,6 +222,19 @@
       
         <a href="../CHANGELOG/" class="md-tabs__link">
           Changelog
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tutorials/CPP-guide/" class="md-tabs__link">
+          Tutorials
         </a>
       
     </li>
@@ -841,6 +863,166 @@
     Available configurations
   </a>
   
+    <nav class="md-nav" aria-label="Available configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-unzipped-path" class="md-nav__link">
+    lsp-eslint-unzipped-path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-server-command" class="md-nav__link">
+    lsp-eslint-server-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-enable" class="md-nav__link">
+    lsp-eslint-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-package-manager" class="md-nav__link">
+    lsp-eslint-package-manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-format" class="md-nav__link">
+    lsp-eslint-format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-node-path" class="md-nav__link">
+    lsp-eslint-node-path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-node" class="md-nav__link">
+    lsp-eslint-node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-options" class="md-nav__link">
+    lsp-eslint-options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-trace-server" class="md-nav__link">
+    lsp-eslint-trace-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-run" class="md-nav__link">
+    lsp-eslint-run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-auto-fix-on-save" class="md-nav__link">
+    lsp-eslint-auto-fix-on-save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-fix-all-problem-type" class="md-nav__link">
+    lsp-eslint-fix-all-problem-type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-quiet" class="md-nav__link">
+    lsp-eslint-quiet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-working-directories" class="md-nav__link">
+    lsp-eslint-working-directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-validate" class="md-nav__link">
+    lsp-eslint-validate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-provide-lint-task" class="md-nav__link">
+    lsp-eslint-provide-lint-task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-lint-task-enable" class="md-nav__link">
+    lsp-eslint-lint-task-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-lint-task-options" class="md-nav__link">
+    lsp-eslint-lint-task-options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-runtime" class="md-nav__link">
+    lsp-eslint-runtime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-code-action-disable-rule-comment" class="md-nav__link">
+    lsp-eslint-code-action-disable-rule-comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-code-action-show-documentation" class="md-nav__link">
+    lsp-eslint-code-action-show-documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-experimental-incremental-sync" class="md-nav__link">
+    lsp-eslint-experimental-incremental-sync
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1132,8 +1314,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../lsp-ocalm-lsp-server/" title="OCaml (icaml-lsp)" class="md-nav__link">
-      OCaml (icaml-lsp)
+    <a href="../lsp-ocaml-lsp-server/" title="OCaml (ocaml-lsp)" class="md-nav__link">
+      OCaml (ocaml-lsp)
     </a>
   </li>
 
@@ -1216,6 +1398,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../lsp-prolog/" title="Prolog" class="md-nav__link">
+      Prolog
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../lsp-purescript/" title="PureScript" class="md-nav__link">
       PureScript
     </a>
@@ -1278,6 +1472,30 @@
   <li class="md-nav__item">
     <a href="../lsp-r/" title="R" class="md-nav__link">
       R
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lsp-racket-langserver/" title="Racket (jeapostrophe)" class="md-nav__link">
+      Racket (jeapostrophe)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lsp-racket-language-server/" title="Racket (Theia)" class="md-nav__link">
+      Racket (Theia)
     </a>
   </li>
 
@@ -1603,11 +1821,73 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
     <label class="md-nav__link" for="nav-6">
+      Tutorials
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tutorials" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Tutorials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/CPP-guide/" title="Configuring Emacs a C/C++ IDE" class="md-nav__link">
+      Configuring Emacs a C/C++ IDE
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/how-to-turn-off/" title="A guide on disabling/enabling lsp-mode features" class="md-nav__link">
+      A guide on disabling/enabling lsp-mode features
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tutorials/reactjs-tutorial/" title="React JavaScript Tutorial in Emacs" class="md-nav__link">
+      React JavaScript Tutorial in Emacs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
       Blog
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Blog" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
+      <label class="md-nav__title" for="nav-7">
         <span class="md-nav__icon md-icon"></span>
         Blog
       </label>
@@ -1621,14 +1901,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7-1" type="checkbox" id="nav-7-1">
     
-    <label class="md-nav__link" for="nav-6-1">
+    <label class="md-nav__link" for="nav-7-1">
       2020
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="2020" data-md-level="2">
-      <label class="md-nav__title" for="nav-6-1">
+      <label class="md-nav__title" for="nav-7-1">
         <span class="md-nav__icon md-icon"></span>
         2020
       </label>
@@ -1664,14 +1944,14 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-7">
+    <label class="md-nav__link" for="nav-8">
       Support us
       <span class="md-nav__icon md-icon"></span>
     </label>
     <nav class="md-nav" aria-label="Support us" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
+      <label class="md-nav__title" for="nav-8">
         <span class="md-nav__icon md-icon"></span>
         Support us
       </label>
@@ -1750,6 +2030,166 @@
     Available configurations
   </a>
   
+    <nav class="md-nav" aria-label="Available configurations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-unzipped-path" class="md-nav__link">
+    lsp-eslint-unzipped-path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-server-command" class="md-nav__link">
+    lsp-eslint-server-command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-enable" class="md-nav__link">
+    lsp-eslint-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-package-manager" class="md-nav__link">
+    lsp-eslint-package-manager
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-format" class="md-nav__link">
+    lsp-eslint-format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-node-path" class="md-nav__link">
+    lsp-eslint-node-path
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-node" class="md-nav__link">
+    lsp-eslint-node
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-options" class="md-nav__link">
+    lsp-eslint-options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-trace-server" class="md-nav__link">
+    lsp-eslint-trace-server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-run" class="md-nav__link">
+    lsp-eslint-run
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-auto-fix-on-save" class="md-nav__link">
+    lsp-eslint-auto-fix-on-save
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-fix-all-problem-type" class="md-nav__link">
+    lsp-eslint-fix-all-problem-type
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-quiet" class="md-nav__link">
+    lsp-eslint-quiet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-working-directories" class="md-nav__link">
+    lsp-eslint-working-directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-validate" class="md-nav__link">
+    lsp-eslint-validate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-provide-lint-task" class="md-nav__link">
+    lsp-eslint-provide-lint-task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-lint-task-enable" class="md-nav__link">
+    lsp-eslint-lint-task-enable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-lint-task-options" class="md-nav__link">
+    lsp-eslint-lint-task-options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-runtime" class="md-nav__link">
+    lsp-eslint-runtime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-code-action-disable-rule-comment" class="md-nav__link">
+    lsp-eslint-code-action-disable-rule-comment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-code-action-show-documentation" class="md-nav__link">
+    lsp-eslint-code-action-show-documentation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsp-eslint-experimental-incremental-sync" class="md-nav__link">
+    lsp-eslint-experimental-incremental-sync
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1769,16 +2209,102 @@
                   </a>
                 
                 
-                  
-                
-                
-                <h1 id="eslint">Eslint<a class="headerlink" href="#eslint" title="Permanent link">#</a></h1>
+                <h1 id="eslint">ESlint<a class="headerlink" href="#eslint" title="Permanent link">#</a></h1>
 <h2 id="server">Server<a class="headerlink" href="#server" title="Permanent link">#</a></h2>
-<p>For information about the LSP server, check the <a href="https://github.com/Microsoft/vscode-eslint">eslint</a>.</p>
+<p>For more information about the LSP server, check <a href="https://github.com/Microsoft/vscode-eslint">eslint</a>.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
-<p>For more instructions on how to install, check <a href="https://github.com/emacs-lsp/lsp-mode/wiki/LSP-ESlint-integration">here</a>.</p>
+<p>This Server supports automatic install.
+Install this language server with <kbd>M-x</kbd><code>lsp-install-server</code><kbd>RET</kbd><code>eslint</code><kbd>RET</kbd>.</p>
 <h3 id="debugger-na">Debugger: N/A<a class="headerlink" href="#debugger-na" title="Permanent link">#</a></h3>
 <h2 id="available-configurations">Available configurations<a class="headerlink" href="#available-configurations" title="Permanent link">#</a></h2>
+<h3 id="lsp-eslint-unzipped-path"><code>lsp-eslint-unzipped-path</code><a class="headerlink" href="#lsp-eslint-unzipped-path" title="Permanent link">#</a></h3>
+<p><em>Default: <code>~/.emacs.d/.cache/lsp/eslint/unzipped</code></em></p>
+<p>The path to the file in which ‘eslint’ will be stored.</p>
+<hr />
+<h3 id="lsp-eslint-server-command"><code>lsp-eslint-server-command</code><a class="headerlink" href="#lsp-eslint-server-command" title="Permanent link">#</a></h3>
+<p><em>Default: <code>(node ~/server/out/eslintServer.js --stdio)</code></em></p>
+<p>Command to start eslint server.</p>
+<hr />
+<h3 id="lsp-eslint-enable"><code>lsp-eslint-enable</code><a class="headerlink" href="#lsp-eslint-enable" title="Permanent link">#</a></h3>
+<p><em>Default: <code>t</code></em></p>
+<p>Controls whether eslint is enabled for JavaScript files or not.</p>
+<hr />
+<h3 id="lsp-eslint-package-manager"><code>lsp-eslint-package-manager</code><a class="headerlink" href="#lsp-eslint-package-manager" title="Permanent link">#</a></h3>
+<p><em>Default: <code>npm</code></em></p>
+<p>The package manager you use to install node modules.</p>
+<hr />
+<h3 id="lsp-eslint-format"><code>lsp-eslint-format</code><a class="headerlink" href="#lsp-eslint-format" title="Permanent link">#</a></h3>
+<p><em>Default: <code>t</code></em></p>
+<p>Whether to perform format.</p>
+<hr />
+<h3 id="lsp-eslint-node-path"><code>lsp-eslint-node-path</code><a class="headerlink" href="#lsp-eslint-node-path" title="Permanent link">#</a></h3>
+<p><em>Default: <code>nil</code></em></p>
+<p>A path added to NODE_PATH when resolving the eslint module.</p>
+<hr />
+<h3 id="lsp-eslint-node"><code>lsp-eslint-node</code><a class="headerlink" href="#lsp-eslint-node" title="Permanent link">#</a></h3>
+<p><em>Default: <code>node</code></em></p>
+<p>Path to nodejs.</p>
+<hr />
+<h3 id="lsp-eslint-options"><code>lsp-eslint-options</code><a class="headerlink" href="#lsp-eslint-options" title="Permanent link">#</a></h3>
+<p><em>Default: <code>nil</code></em></p>
+<p>The eslint options object to provide args normally passed to
+  eslint when executed from a command line (see
+  http://eslint.org/docs/developer-guide/nodejs-api#cliengine).</p>
+<hr />
+<h3 id="lsp-eslint-trace-server"><code>lsp-eslint-trace-server</code><a class="headerlink" href="#lsp-eslint-trace-server" title="Permanent link">#</a></h3>
+<p><em>Default: <code>off</code></em></p>
+<p>Traces the communication between VSCode and the eslint linter service.</p>
+<hr />
+<h3 id="lsp-eslint-run"><code>lsp-eslint-run</code><a class="headerlink" href="#lsp-eslint-run" title="Permanent link">#</a></h3>
+<p><em>Default: <code>onType</code></em></p>
+<p>Run the linter on save (onSave) or on type (onType)</p>
+<hr />
+<h3 id="lsp-eslint-auto-fix-on-save"><code>lsp-eslint-auto-fix-on-save</code><a class="headerlink" href="#lsp-eslint-auto-fix-on-save" title="Permanent link">#</a></h3>
+<p><em>Default: <code>nil</code></em></p>
+<p>Turns auto fix on save on or off.</p>
+<hr />
+<h3 id="lsp-eslint-fix-all-problem-type"><code>lsp-eslint-fix-all-problem-type</code><a class="headerlink" href="#lsp-eslint-fix-all-problem-type" title="Permanent link">#</a></h3>
+<p><em>Default: <code>all</code></em></p>
+<p>Determines which problems are fixed when running the
+source.fixAll code action.</p>
+<hr />
+<h3 id="lsp-eslint-quiet"><code>lsp-eslint-quiet</code><a class="headerlink" href="#lsp-eslint-quiet" title="Permanent link">#</a></h3>
+<p><em>Default: <code>nil</code></em></p>
+<p>Turns on quiet mode, which ignores warnings.</p>
+<hr />
+<h3 id="lsp-eslint-working-directories"><code>lsp-eslint-working-directories</code><a class="headerlink" href="#lsp-eslint-working-directories" title="Permanent link">#</a></h3>
+<p><em>Default: <code>[]</code></em></p>
+<hr />
+<h3 id="lsp-eslint-validate"><code>lsp-eslint-validate</code><a class="headerlink" href="#lsp-eslint-validate" title="Permanent link">#</a></h3>
+<p><em>Default: <code>[javascript javascriptreact]</code></em></p>
+<p>An array of language ids which should be validated by ESLint</p>
+<hr />
+<h3 id="lsp-eslint-provide-lint-task"><code>lsp-eslint-provide-lint-task</code><a class="headerlink" href="#lsp-eslint-provide-lint-task" title="Permanent link">#</a></h3>
+<p><em>Default: <code>nil</code></em></p>
+<p>Controls whether a task for linting the whole workspace will be available.</p>
+<hr />
+<h3 id="lsp-eslint-lint-task-enable"><code>lsp-eslint-lint-task-enable</code><a class="headerlink" href="#lsp-eslint-lint-task-enable" title="Permanent link">#</a></h3>
+<p><em>Default: <code>nil</code></em></p>
+<p>Controls whether a task for linting the whole workspace will be available.</p>
+<hr />
+<h3 id="lsp-eslint-lint-task-options"><code>lsp-eslint-lint-task-options</code><a class="headerlink" href="#lsp-eslint-lint-task-options" title="Permanent link">#</a></h3>
+<p><em>Default: <code>.</code></em></p>
+<p>Command line options applied when running the task for linting the whole workspace (see https://eslint.org/docs/user-guide/command-line-interface).</p>
+<hr />
+<h3 id="lsp-eslint-runtime"><code>lsp-eslint-runtime</code><a class="headerlink" href="#lsp-eslint-runtime" title="Permanent link">#</a></h3>
+<p><em>Default: <code>nil</code></em></p>
+<p>The location of the node binary to run ESLint under.</p>
+<hr />
+<h3 id="lsp-eslint-code-action-disable-rule-comment"><code>lsp-eslint-code-action-disable-rule-comment</code><a class="headerlink" href="#lsp-eslint-code-action-disable-rule-comment" title="Permanent link">#</a></h3>
+<p><em>Default: <code>((enable . t) (location . separateLine))</code></em></p>
+<hr />
+<h3 id="lsp-eslint-code-action-show-documentation"><code>lsp-eslint-code-action-show-documentation</code><a class="headerlink" href="#lsp-eslint-code-action-show-documentation" title="Permanent link">#</a></h3>
+<p><em>Default: <code>((enable . t))</code></em></p>
+<hr />
+<h3 id="lsp-eslint-experimental-incremental-sync"><code>lsp-eslint-experimental-incremental-sync</code><a class="headerlink" href="#lsp-eslint-experimental-incremental-sync" title="Permanent link">#</a></h3>
+<p><em>Default: <code>t</code></em></p>
+<p>Controls whether the new incremental text document synchronization should be used.</p>
+<hr />
                 
                   
                     
@@ -1787,7 +2313,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 29, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 26, 2020</span>
     
   </small>
 </div>
@@ -1877,8 +2403,8 @@
         
         
       
-      <a href="https://gitter.im/emacs-lsp/lsp-mode" target="_blank" rel="noopener" title="gitter.im" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M66.4 322.5H16V0h50.4v322.5zM166.9 76.1h-50.4V512h50.4V76.1zm100.6 0h-50.4V512h50.4V76.1zM368 76h-50.4v247H368V76z"/></svg>
+      <a href="https://discord.gg/swuxy5AAgT" target="_blank" rel="noopener" title="discord.gg" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M297.216 243.2c0 15.616-11.52 28.416-26.112 28.416-14.336 0-26.112-12.8-26.112-28.416s11.52-28.416 26.112-28.416c14.592 0 26.112 12.8 26.112 28.416zm-119.552-28.416c-14.592 0-26.112 12.8-26.112 28.416s11.776 28.416 26.112 28.416c14.592 0 26.112-12.8 26.112-28.416.256-15.616-11.52-28.416-26.112-28.416zM448 52.736V512c-64.494-56.994-43.868-38.128-118.784-107.776l13.568 47.36H52.48C23.552 451.584 0 428.032 0 398.848V52.736C0 23.552 23.552 0 52.48 0h343.04C424.448 0 448 23.552 448 52.736zm-72.96 242.688c0-82.432-36.864-149.248-36.864-149.248-36.864-27.648-71.936-26.88-71.936-26.88l-3.584 4.096c43.52 13.312 63.744 32.512 63.744 32.512-60.811-33.329-132.244-33.335-191.232-7.424-9.472 4.352-15.104 7.424-15.104 7.424s21.248-20.224 67.328-33.536l-2.56-3.072s-35.072-.768-71.936 26.88c0 0-36.864 66.816-36.864 149.248 0 0 21.504 37.12 78.08 38.912 0 0 9.472-11.52 17.152-21.248-32.512-9.728-44.8-30.208-44.8-30.208 3.766 2.636 9.976 6.053 10.496 6.4 43.21 24.198 104.588 32.126 159.744 8.96 8.96-3.328 18.944-8.192 29.44-15.104 0 0-12.8 20.992-46.336 30.464 7.68 9.728 16.896 20.736 16.896 20.736 56.576-1.792 78.336-38.912 78.336-38.912z"/></svg>
       </a>
     
   </div>
@@ -1889,15 +2415,15 @@
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.df0def68.min.js"></script>
-      <script src="../../assets/javascripts/bundle.ba57d267.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../../assets/javascripts/vendor.c6483021.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e2f7d7a4.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "../..",
-          features: ["tabs"],
+          features: ['navigation.tabs'],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../../assets/javascripts/worker/search.cbc634e2.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
